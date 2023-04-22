@@ -7,18 +7,32 @@ func main() {
 	//  Se inicializan con la palabra 'type' seguido del nombre y 
 	//  luego entre llaves los valores de la estructura
 
-	type Person struct{
-		nombre string
-		apellido string
-	}
-
-	francisco := Person{
-		nombre: "Francisco",
-		apellido: "Nessier",
+	type Person struct {
+		Nombre   string
+		Apellido string
+		Edad int
 	}
 	
-	francisco.nombre = "Francisco Pedro" // Modifico un valor de un atributo
+	func (p *Person) Saludar() {
+		fmt.Println("Hola mi nombre es:", p.Nombre, p.Apellido)
+	}
+	
+
+	francisco := Person{
+		Nombre: "Francisco",
+		Apellido: "Nessier",
+		Edad: 28,
+	}
+
+
+	francisco.Nombre = "Francisco Pedro" // Modifico un valor de un atributo
 
 	fmt.Println(francisco) // Verifico lo modificado
+	francisco.Saludar()
+
+
+	//  Los  métodos en Go no se definen dentro del struct
+	//  Se declaran desde fuera con la siguiente sintaxis
 
 }
+
