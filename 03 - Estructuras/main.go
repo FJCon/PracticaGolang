@@ -16,11 +16,15 @@ type Person struct {
 //  Los método para un struct se declaran fuera de éste
 // con una funcion a la que se le debe indicar a que struct
 // aplicar el método, seguido del nombre del metodo y su lógica
+
 func (p *Person) Saludar(){
 	fmt.Println("Hola mi nombre es:", p.Nombre, p.Apellido)
 }
 
+
 func main() {
+
+	//
 	francisco := Person{
 		Nombre: "Francisco",
 		Apellido: "Nessier",
