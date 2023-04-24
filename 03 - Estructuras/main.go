@@ -2,22 +2,21 @@ package main
 
 import "fmt"
 
-func main() {
 	//  Las estructuras se utilizan pararepresentar objetos en Go
 	//  Se inicializan con la palabra 'type' seguido del nombre y 
 	//  luego entre llaves los valores de la estructura
+	// Se pueden declarar dentro de func main()
 
-	type Person struct {
-		Nombre   string
-		Apellido string
-		Edad int
-	}
-	
-	func (p *Person) Saludar() {
-		fmt.Println("Hola mi nombre es:", p.Nombre, p.Apellido)
-	}
-	
+type Person struct {
+	Nombre   string
+	Apellido string
+	Edad int
+}
+func (p *Person) Saludar(){
+	fmt.Println("Hola mi nombre es:", p.Nombre, p.Apellido)
+}
 
+func main() {
 	francisco := Person{
 		Nombre: "Francisco",
 		Apellido: "Nessier",
