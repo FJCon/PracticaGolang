@@ -1,6 +1,7 @@
 package main
 import "fmt"
 func main() {
+
 	//Arrays solo guardan datos del mismo tipo
 	//Se debe indicar la longitud
 
@@ -37,6 +38,7 @@ func main() {
 		fmt.Println(num)
 	}
 	fmt.Println("==================")
+
 	//  Para agregar variables de distinto tipo en un array o en un slice
 	//  Se debe aplicar una interfaz vacía... La interfaz "envuelve" a los datos
 	//  antes de ser almacenados en el array
@@ -48,4 +50,30 @@ func main() {
 	for _, num := range segSlice{
 		fmt.Println(num)
 	}
+
+
+	/* M A P A S */
+	//Se definen sin longitud
+	fmt.Print("==============MAPAS EN GO==============")
+
+
+ // Se indica que la variable es del tipo map y dentro de corchetes se escribe el tipo de dato de la clave, 
+ // luego se coloca el tipo de dato del "valor" fuera de los corchetes
+	mapa := map[string]int{ //clave de tipo string, valor de tipo entero
+		"Hello World": 0,
+		"Declaracion de variables": 1,
+		"Colecciones":2,
+	}
+
+	fmt.Println(mapa)
+
+	//de esta forma se agrega un nuevo par clave-valor:
+	mapa["Estructura"] = 3
+	fmt.Print(mapa)
+
+	//de esta forma se elimina un elemento:
+
+	delete(mapa, "Estructura")
+	fmt.Println(mapa)
+
 }

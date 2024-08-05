@@ -2,10 +2,14 @@ package main
 
 import "fmt"
 
-	//  Las estructuras se utilizan pararepresentar objetos en Go
-	//  Se inicializan con la palabra 'type' seguido del nombre y 
-	//  luego entre llaves los valores de la estructura
-	// Se pueden declarar dentro de func main()
+	/*
+		Las estructuras se utilizan para representar objetos.
+		Se inicializan con la palabra 'type' seguido del  de la estructura,
+		se debe indicar que es del tipo struct y luego entre llaves se indican 
+		los valores de la estructura.
+
+		Se pueden declarar dentro de func main()
+	*/
 
 type Person struct {
 	Nombre   string
@@ -14,7 +18,7 @@ type Person struct {
 }
 
 //  Los método para un struct se declaran fuera de éste
-// con una funcion a la que se le debe indicar a que struct
+// con una funcion a la que se le debe indicar a que struct pertenece
 // aplicar el método, seguido del nombre del metodo y su lógica
 
 func (p *Person) Saludar(){
